@@ -15,7 +15,7 @@
  * @param blurRadius     The maximum radius of the pyramid blur.
  * @param gradientRadius The distance from the line at which the maximum blur radius is reached.
  */
-function tiltShift(startX, startY, endX, endY, blurRadius, gradientRadius) {
+export function tiltShift(startX, startY, endX, endY, blurRadius, gradientRadius) {
     gl.tiltShift = gl.tiltShift || new Shader(null, '\
         uniform sampler2D texture;\
         uniform float blurRadius;\

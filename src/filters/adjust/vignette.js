@@ -4,7 +4,7 @@
  * @param size     0 to 1 (0 for center of frame, 1 for edge of frame)
  * @param amount   0 to 1 (0 for no effect, 1 for maximum lens darkening)
  */
-function vignette(size, amount) {
+export function vignette(size, amount) {
     gl.vignette = gl.vignette || new Shader(null, '\
         uniform sampler2D texture;\
         uniform float size;\

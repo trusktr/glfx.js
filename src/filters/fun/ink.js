@@ -8,7 +8,7 @@
  *                 of black edges. Negative strength values will create white ink edges
  *                 instead of black ones.
  */
-function ink(strength) {
+export function ink(strength) {
     gl.ink = gl.ink || new Shader(null, '\
         uniform sampler2D texture;\
         uniform float strength;\

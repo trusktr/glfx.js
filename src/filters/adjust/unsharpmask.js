@@ -5,7 +5,7 @@
  * @param radius   The blur radius that calculates the average of the neighboring pixels.
  * @param strength A scale factor where 0 is no effect and higher values cause a stronger effect.
  */
-function unsharpMask(radius, strength) {
+export function unsharpMask(radius, strength) {
     gl.unsharpMask = gl.unsharpMask || new Shader(null, '\
         uniform sampler2D blurredTexture;\
         uniform sampler2D originalTexture;\

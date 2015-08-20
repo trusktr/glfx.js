@@ -1,4 +1,4 @@
-function warpShader(uniforms, warp) {
+export function warpShader(uniforms, warp) {
     return new Shader(null, uniforms + '\
     uniform sampler2D texture;\
     uniform vec2 texSize;\

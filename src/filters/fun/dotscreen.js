@@ -7,7 +7,7 @@
  * @param angle   The rotation of the pattern in radians.
  * @param size    The diameter of a dot in pixels.
  */
-function dotScreen(centerX, centerY, angle, size) {
+export function dotScreen(centerX, centerY, angle, size) {
     gl.dotScreen = gl.dotScreen || new Shader(null, '\
         uniform sampler2D texture;\
         uniform vec2 center;\

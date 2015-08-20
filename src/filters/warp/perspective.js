@@ -8,7 +8,7 @@
  * @param after  The x and y coordinates of four points after the transform in a flat list, just
  *               like the other argument.
  */
-function perspective(before, after) {
+export function perspective(before, after) {
     var a = getSquareToQuad.apply(null, after);
     var b = getSquareToQuad.apply(null, before);
     var c = multiply(getInverse(a), b);

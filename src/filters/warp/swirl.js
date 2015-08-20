@@ -7,7 +7,7 @@
  * @param angle   The angle in radians that the pixels in the center of
  *                the circular region will be rotated by.
  */
-function swirl(centerX, centerY, radius, angle) {
+export function swirl(centerX, centerY, radius, angle) {
     gl.swirl = gl.swirl || warpShader('\
         uniform float radius;\
         uniform float angle;\

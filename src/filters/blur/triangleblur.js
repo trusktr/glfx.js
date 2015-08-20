@@ -5,7 +5,7 @@
  *               perpendicular triangle filters.
  * @param radius The radius of the pyramid convolved with the image.
  */
-function triangleBlur(radius) {
+export function triangleBlur(radius) {
     gl.triangleBlur = gl.triangleBlur || new Shader(null, '\
         uniform sampler2D texture;\
         uniform vec2 delta;\

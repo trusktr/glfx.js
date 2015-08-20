@@ -14,7 +14,7 @@
  * @param brightness -1 to 1 (the brightness of the bokeh, negative values will create dark bokeh)
  * @param angle      the rotation of the bokeh in radians
  */
-function lensBlur(radius, brightness, angle) {
+export function lensBlur(radius, brightness, angle) {
     // All averaging is done on values raised to a power to make more obvious bokeh
     // (we will raise the average to the inverse power at the end to compensate).
     // Without this the image looks almost like a normal blurred image. This hack is

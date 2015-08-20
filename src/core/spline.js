@@ -1,6 +1,6 @@
 // from SplineInterpolator.cs in the Paint.NET source code
 
-function SplineInterpolator(points) {
+export function SplineInterpolator(points) {
     var n = points.length;
     this.xa = [];
     this.ya = [];

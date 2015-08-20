@@ -1,6 +1,6 @@
 // from javax.media.jai.PerspectiveTransform
 
-function getSquareToQuad(x0, y0, x1, y1, x2, y2, x3, y3) {
+export function getSquareToQuad(x0, y0, x1, y1, x2, y2, x3, y3) {
     var dx1 = x1 - x2;
     var dy1 = y1 - y2;
     var dx2 = x3 - x2;
@@ -17,7 +17,7 @@ function getSquareToQuad(x0, y0, x1, y1, x2, y2, x3, y3) {
     ];
 }
 
-function getInverse(m) {
+export function getInverse(m) {
     var a = m[0], b = m[1], c = m[2];
     var d = m[3], e = m[4], f = m[5];
     var g = m[6], h = m[7], i = m[8];
@@ -29,7 +29,7 @@ function getInverse(m) {
     ];
 }
 
-function multiply(a, b) {
+export function multiply(a, b) {
     return [
         a[0]*b[0] + a[1]*b[3] + a[2]*b[6],
         a[0]*b[1] + a[1]*b[4] + a[2]*b[7],

@@ -3,7 +3,7 @@
  * @description    Adds black and white noise to the image.
  * @param amount   0 to 1 (0 for no effect, 1 for maximum noise)
  */
-function noise(amount) {
+export function noise(amount) {
     gl.noise = gl.noise || new Shader(null, '\
         uniform sampler2D texture;\
         uniform float amount;\

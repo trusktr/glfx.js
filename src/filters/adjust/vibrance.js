@@ -3,7 +3,7 @@
  * @description  Modifies the saturation of desaturated colors, leaving saturated colors unmodified.
  * @param amount -1 to 1 (-1 is minimum vibrance, 0 is no change, and 1 is maximum vibrance)
  */
-function vibrance(amount) {
+export function vibrance(amount) {
     gl.vibrance = gl.vibrance || new Shader(null, '\
         uniform sampler2D texture;\
         uniform float amount;\

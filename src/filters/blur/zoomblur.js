@@ -6,7 +6,7 @@
  * @param strength The strength of the blur. Values in the range 0 to 1 are usually sufficient,
  *                 where 0 doesn't change the image and 1 creates a highly blurred image.
  */
-function zoomBlur(centerX, centerY, strength) {
+export function zoomBlur(centerX, centerY, strength) {
     gl.zoomBlur = gl.zoomBlur || new Shader(null, '\
         uniform sampler2D texture;\
         uniform vec2 center;\

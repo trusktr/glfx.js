@@ -2,7 +2,7 @@
 // Filter object
 ////////////////////////////////////////////////////////////////////////////////
 
-function Filter(name, func, init, update, imageFile) {
+export function Filter(name, func, init, update, imageFile) {
     this.name = name;
     this.func = func;
     this.update = update;
@@ -107,7 +107,7 @@ for (var file in images) {
 
 $(window).load(init);
 
-function init() {
+export function init() {
     // Count the images as they load and only initialize when they are all loaded
     if (++initCount < loadCount) return;
 

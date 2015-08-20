@@ -4,7 +4,7 @@
  *               copies of the image blurred with different radii.
  * @param radius The radius of the effect in pixels.
  */
-function edgeWork(radius) {
+export function edgeWork(radius) {
     gl.edgeWork1 = gl.edgeWork1 || new Shader(null, '\
         uniform sampler2D texture;\
         uniform vec2 delta;\

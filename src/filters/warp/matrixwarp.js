@@ -13,7 +13,7 @@
  *                        from -1 to 1 instead of 0 to width - 1 or height - 1, and are easier
  *                        to use for simple operations like flipping and rotating.
  */
-function matrixWarp(matrix, inverse, useTextureSpace) {
+export function matrixWarp(matrix, inverse, useTextureSpace) {
     gl.matrixWarp = gl.matrixWarp || warpShader('\
         uniform mat3 matrix;\
         uniform bool useTextureSpace;\

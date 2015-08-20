@@ -6,7 +6,7 @@
  * @param centerY The y coordinate of the pattern center.
  * @param scale   The width of an individual tile, in pixels.
  */
-function hexagonalPixelate(centerX, centerY, scale) {
+export function hexagonalPixelate(centerX, centerY, scale) {
     gl.hexagonalPixelate = gl.hexagonalPixelate || new Shader(null, '\
         uniform sampler2D texture;\
         uniform vec2 center;\

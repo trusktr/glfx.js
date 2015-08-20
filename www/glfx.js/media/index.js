@@ -1,4 +1,4 @@
-function init(image) {
+export function init(image) {
     var placeholder = document.getElementById('placeholder');
 
     // Try to get a WebGL canvas

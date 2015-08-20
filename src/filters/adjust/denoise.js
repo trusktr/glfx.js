@@ -6,7 +6,7 @@
  *                 than zero. A value of zero just gives an 9x9 box blur and high values
  *                 give the original image, but ideal values are usually around 10-20.
  */
-function denoise(exponent) {
+export function denoise(exponent) {
     // Do a 9x9 bilateral box filter
     gl.denoise = gl.denoise || new Shader(null, '\
         uniform sampler2D texture;\

@@ -1,4 +1,4 @@
-function splineInterpolate(points) {
+export function splineInterpolate(points) {
     var interpolator = new SplineInterpolator(points);
     var array = [];
     for (var i = 0; i < 256; i++) {
@@ -26,7 +26,7 @@ function splineInterpolate(points) {
  * @param blue  (optional) A list of points that define the function for the blue
  *              channel (just like for red).
  */
-function curves(red, green, blue) {
+export function curves(red, green, blue) {
     // Create the ramp texture
     red = splineInterpolate(red);
     if (arguments.length == 1) {

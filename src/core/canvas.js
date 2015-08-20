@@ -1,10 +1,10 @@
 var gl;
 
-function clamp(lo, value, hi) {
+export function clamp(lo, value, hi) {
     return Math.max(lo, Math.min(value, hi));
 }
 
-function wrapTexture(texture) {
+export function wrapTexture(texture) {
     return {
         _: texture,
         loadContentsOf: function(element) {
@@ -20,11 +20,11 @@ function wrapTexture(texture) {
     };
 }
 
-function texture(element) {
+export function texture(element) {
     return wrapTexture(Texture.fromElement(element));
 }
 
-function initialize(width, height) {
+export function initialize(width, height) {
     var type = gl.UNSIGNED_BYTE;
 
     // Go for floating point buffer textures if we can, it'll make the bokeh
@@ -63,7 +63,7 @@ function initialize(width, height) {
    If no width and height are given then the original texture width and height
    are used.
 */
-function draw(texture, width, height) {
+export function draw(texture, width, height) {
     if (!this._.isInitialized || texture._.width != this.width || texture._.height != this.height) {
         initialize.call(this, width ? width : texture._.width, height ? height : texture._.height);
     }
@@ -76,13 +76,13 @@ function draw(texture, width, height) {
     return this;
 }
 
-function update() {
+export function update() {
     this._.texture.use();
     this._.flippedShader.drawRect();
     return this;
 }
 
-function simpleShader(shader, uniforms, textureIn, textureOut) {
+export function simpleShader(shader, uniforms, textureIn, textureOut) {
     (textureIn || this._.texture).use();
     this._.spareTexture.drawTo(function() {
         shader.uniforms(uniforms).drawRect();
@@ -90,13 +90,13 @@ function simpleShader(shader, uniforms, textureIn, textureOut) {
     this._.spareTexture.swapWith(textureOut || this._.texture);
 }
 
-function replace(node) {
+export function replace(node) {
     node.parentNode.insertBefore(this, node);
     node.parentNode.removeChild(node);
     return this;
 }
 
-function contents() {
+export function contents() {
     var texture = new Texture(this._.texture.width, this._.texture.height, gl.RGBA, gl.UNSIGNED_BYTE);
     this._.texture.use();
     texture.drawTo(function() {
@@ -109,7 +109,7 @@ function contents() {
    Get a Uint8 array of pixel values: [r, g, b, a, r, g, b, a, ...]
    Length of the array will be width * height * 4.
 */
-function getPixelArray() {
+export function getPixelArray() {
     var w = this._.texture.width;
     var h = this._.texture.height;
     var array = new Uint8Array(w * h * 4);
@@ -119,7 +119,7 @@ function getPixelArray() {
     return array;
 }
 
-function wrap(func) {
+export function wrap(func) {
     return function() {
         // Make sure that we're using the correct global WebGL context
         gl = this._.gl;
