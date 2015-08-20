@@ -1,4 +1,4 @@
-var Shader = (function() {
+export var Shader = (function() {
     function isArray(obj) {
         return Object.prototype.toString.call(obj) == '[object Array]';
     }

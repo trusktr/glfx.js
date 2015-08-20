@@ -89,11 +89,11 @@ Filter.prototype.use = function() {
 // Initialization code
 ////////////////////////////////////////////////////////////////////////////////
 
-var canvas;
-var texture;
+export var canvas;
+export var texture;
 
-var initCount = 0, loadCount = 1;
-var images = {
+export var initCount = 0, loadCount = 1;
+export var images = {
     'image.jpg': { credit: 'matthigh', url: 'http://www.flickr.com/photos/matthigh/2125630879/' },
     'lighthouse.jpg': { credit: 'renet', url: 'http://www.flickr.com/photos/renet/12135813/' },
     'perspective.jpg': { credit: 'stuckincustoms', url: 'http://www.flickr.com/photos/stuckincustoms/1213760517/' }
@@ -180,8 +180,8 @@ export function init() {
 // Filter definitions
 ////////////////////////////////////////////////////////////////////////////////
 
-var perspectiveNubs = [175, 156, 496, 55, 161, 279, 504, 330];
-var filters = {
+export var perspectiveNubs = [175, 156, 496, 55, 161, 279, 504, 330];
+export var filters = {
     'Adjust': [
         new Filter('Brightness / Contrast', 'brightnessContrast', function() {
             this.addSlider('brightness', 'Brightness', -1, 1, 0, 0.01);

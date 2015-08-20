@@ -1,4 +1,4 @@
-var gl;
+export var gl;
 
 export function clamp(lo, value, hi) {
     return Math.max(lo, Math.min(value, hi));

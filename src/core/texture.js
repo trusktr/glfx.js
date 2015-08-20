@@ -1,4 +1,4 @@
-var Texture = (function() {
+export var Texture = (function() {
     Texture.fromElement = function(element) {
         var texture = new Texture(0, 0, gl.RGBA, gl.UNSIGNED_BYTE);
         texture.loadContentsOf(element);
